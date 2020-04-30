@@ -71,3 +71,16 @@ We provide a simple **shelve-viewer** script to easily check the contents of a s
 python3 semiograph_shelve_viewer.py "${trainingresult}.shelve"
 ```
 
+
+# Cite
+
+When using SemioGraph cite the following according to AGPL licence (http://www.gnu.org/licenses/agpl-3.0.en.html).
+
+```
+@article{Mehler:et:al:2020b,
+    author={Mehler, Alexander and Geelhaar, Tim and Henlein, Alexander and Abrami, Giuseppe and Baumartz, Daniel and Uslu, Tolga and Hemati, Wahed and Jussen, Bernhard},
+    title={The Frankfurt Latin Lexicon. From Morphological Expansion and Word Embeddings to SemioGraphs},
+    journal={Studi e Saggi Linguistici},
+    year={2020}
+}
+```
