@@ -13,7 +13,7 @@ Embeddings can be visualized with Semiograph. We already created many embeddings
 <img src="https://github.com/texttechnologylab/SemioGraph/blob/master/SemiographPipeline.png" width="100%">
 
 ### Preprocessing
-
+The preprocessing was done by the **TextImager** (https://textimager.hucompute.org/). The resulting file (data/example.tei)  was prepared for vectorization according to the model of Mikolov, but others are also possible (data/trainingfile.txt).
 
 ### Vectorisation
 After successfully creating a training file, the embeddings have to be calculated. There are several possibilities for this, we use **word2vec** and **fastText**. By adjusting parameters, different embeddings can be created. The parameters of embedding generation used in SemioGraph are documented by the individual entries.
