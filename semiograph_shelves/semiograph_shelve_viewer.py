@@ -16,6 +16,11 @@ if __name__ == '__main__':
     print("opening shelve", shelve_input_file)
     with shelve.open(shelve_input_file) as embeddings_shelve:
         print("enter word to see nearest neighbors in shelve, CTRL+C to cancel")
+        example_word = ""
+        for word in embeddings_shelve:
+            example_word = word
+            break
+        print("e.g. try '" + example_word + "'")
         try:
             while True:
                 word = input("word: ")
