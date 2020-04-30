@@ -35,5 +35,39 @@ word2vec -train $trainingsfile -output $trainingresult -size 500 -window 5 -iter
 
 
 **fastText**
+```
+fasttext skipgram -input $trainingsfile -output $trainingresult
+```
+#### Exemplary training
+```
+fasttext skipgram -input $trainingsfile -output $trainingresult -dim 300 -minn 3 -maxn 6 -epoch 5
+```
+
+- *skipgram* Replace with cbow to use continuous bag of words model instead
+- *dim* Set size of word vectors
+- *epoch* Count of training interations
+- *minn*, *maxn* Min/max length of char ngram
+
+For a list of all available arguments see https://github.com/facebookresearch/fastText/
 
 ### Graphicalization
+The SemioGraph web interface uses SemioGraph shelve files for visualization. The shelves contain precalculated nearest neighbors data, for quick access instead of having to use the full embeddings files. Optionally, we also add DDC topic labels using text2ddc (available at https://textimager.hucompute.org/DDC/). To generate these shelves we use **Gensim**.
+
+```
+python3 semiograph_shelve_create.py [-n TOP_N] [--is_binary_file] [-l LANG] [--ignore_pos] [-i EMBEDDING_ID] [-c MIN_COUNT] [--min_count_corpus MIN_COUNT_CORPUS] embeddings_input_file shelve_output_file
+```
+
+#### Example
+
+```
+python3 semiograph_shelve_create.py $trainingresult "${trainingresult}.shelve" -n 50 --ignore_pos
+```
+
+We provide a simple **shelve-viewer** script to easily check the contents of a shelve. This opens a command prompt that allows to query the shelve for words.
+
+#### Example
+
+```
+python3 semiograph_shelve_viewer.py "${trainingresult}.shelve"
+```
+
