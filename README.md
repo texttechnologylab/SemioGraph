@@ -82,6 +82,7 @@ When using SemioGraph cite the following according to AGPL licence (http://www.g
     author={Mehler, Alexander and Geelhaar, Tim and Henlein, Alexander and Abrami, Giuseppe and Baumartz, Daniel and Uslu, Tolga and Hemati, Wahed and Jussen, Bernhard},
     title={The Frankfurt Latin Lexicon. From Morphological Expansion and Word Embeddings to SemioGraphs},
     journal={Studi e Saggi Linguistici},
-    year={2020}
+    year={2020},
+    note={accepted}
 }
 ```
