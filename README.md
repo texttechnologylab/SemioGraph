@@ -16,6 +16,24 @@ Embeddings can be visualized with Semiograph. We already created many embeddings
 
 
 ### Vectorisation
+After successfully creating a training file, the embeddings have to be calculated. There are several possibilities for this, we use **word2vec** and **fastText**. By adjusting parameters, different embeddings can be created. The parameters of embedding generation used in SemioGraph are documented by the individual entries.
 
+**word2vec**
+```
+word2vec -train $trainingsfile -output $trainingresult
+```
+#### Exemplary training
+```
+word2vec -train $trainingsfile -output $trainingresult -size 500 -window 5 -iter 5
+```
+
+- *size* Set size of word vectors
+- *window* Max skip length between words
+- *iter* Count of training interations
+- *cbow* Use the continuous bag of words model (1); (0) skip-gram model is used
+
+
+
+**fastText**
 
 ### Graphicalization
