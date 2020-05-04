@@ -11,7 +11,7 @@ Embeddings can be visualized with Semiograph. We already created many embeddings
 
 ## Generation of new embeddings
 <img src="https://github.com/texttechnologylab/SemioGraph/blob/master/SemiographPipeline.png" width="100%">
-(Mehler et al 2020b: _The Frankfurt Latin Lexicon. From Morphological Expansion and Word Embeddings to SemioGraphs')
+(Mehler et al 2020b: **The Frankfurt Latin Lexicon. From Morphological Expansion and Word Embeddings to SemioGraphs**)
 
 ### Preprocessing
 The preprocessing was done by the **TextImager** (https://textimager.hucompute.org/). The resulting file (data/example.tei)  was prepared for vectorization according to the model of Mikolov, but others are also possible (data/trainingfile.txt). The example is a small extract from the corpus of the New York Times (2018 / 01).
